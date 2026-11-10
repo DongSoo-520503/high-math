@@ -1,4 +1,4 @@
-/* 미적분 총정리 연습 — 숲지도 style.css 위에 얹는 추가 규칙 */
+/* 미적분 계산 총정리 연습 — 숲지도 style.css 위에 얹는 추가 규칙 */
 :root{--r-poly:var(--g1);--r-explog:var(--ge);--r-trig:var(--g3);--r-extra:var(--g2)}
 mjx-container{color:inherit}
 mjx-container svg{max-width:none!important}

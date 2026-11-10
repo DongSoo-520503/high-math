@@ -1,0 +1,244 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>확률과 통계 개념관계도</title><meta name="description" content="확률과 통계 전체를 한 장의 관계도로 보고, 블록마다 개념과 연습문제 15개를 푸는 페이지">
+<script>window.MathJax={tex:{inlineMath:[["$","$"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+:root{--ink:#17233d;--muted:#55607a;--paper:#fffdf7;--bg:#f3efe4;--navy:#183a73;--yellow:#ffd23f;
+--o:#e58a1f;--o-soft:#fff1d9;--blue:#2e6fd0;--blue-soft:#e3eeff;--green:#2f9256;--green-soft:#e2f4e7;
+--purple:#7a49b8;--purple-soft:#f1e8fb;--teal:#0f8c9a;--teal-soft:#dff4f6;--pink:#c9406b;--pink-soft:#fde6ee;--gray:#8a8f9c;--gray-soft:#eceef2;--red:#d93a2b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Noto Sans CJK KR","Noto Sans KR",sans-serif}
+.sheet{width:1500px;padding:28px 34px 34px;margin:0 auto}
+.part{background:var(--paper);border-radius:22px;padding:22px 24px 24px;border:1px solid #e3dccb;position:relative}
+.part+.part{margin-top:34px}
+.title{display:flex;align-items:center;gap:16px;margin:0 0 16px}
+.title::before,.title::after{content:"";flex:1;height:3px;background:var(--navy);border-radius:2px}
+.title h1{margin:0;background:var(--navy);color:#fff;font-size:34px;font-weight:900;padding:6px 34px;border-radius:999px;letter-spacing:-.01em}
+.title h1 em{font-style:normal;color:var(--yellow)}
+.sub{text-align:center;margin:-8px 0 16px;color:var(--muted);font-size:15px}
+.legend{display:flex;gap:10px;justify-content:flex-end;font-size:13px;color:var(--muted);margin:-6px 0 10px;align-items:center}
+.grid{display:grid;gap:16px}
+.box{border:2.5px solid var(--c);background:var(--cs);border-radius:16px;padding:12px 14px 14px;min-width:0;position:relative}
+.box h2{margin:0 0 8px;font-size:21px;font-weight:900;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.box h2 .no{width:32px;height:32px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-size:18px;flex:none}
+.box h2 small{font-size:13px;font-weight:500;color:var(--muted)}
+.c-o{--c:var(--o);--cs:var(--o-soft)} .c-b{--c:var(--blue);--cs:var(--blue-soft)} .c-g{--c:var(--green);--cs:var(--green-soft)}
+.c-p{--c:var(--purple);--cs:var(--purple-soft)} .c-t{--c:var(--teal);--cs:var(--teal-soft)} .c-k{--c:var(--pink);--cs:var(--pink-soft)}
+.c-x{--c:var(--gray);--cs:var(--gray-soft)}
+.items{display:grid;gap:10px}
+.it{background:#fff;border:1px solid color-mix(in srgb,var(--c) 35%,#fff);border-radius:12px;padding:8px 12px;min-width:0}
+.it .h{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-weight:800;font-size:16px;margin-bottom:2px}
+.it .h .pill{background:var(--c);color:#fff;border-radius:999px;padding:1px 12px;font-size:15px}
+.it .f{font-size:17px;margin:4px 0}
+.it .n{font-size:13.5px;color:var(--muted)}
+.it.dim{opacity:.62;border-style:dashed}
+.tg{white-space:nowrap;display:inline-block;font-size:12px;font-weight:800;border-radius:6px;padding:1px 7px;color:#fff;letter-spacing:.02em}
+.tg.add{background:#1f9d55} .tg.fix{background:#e2621b} .tg.mv{background:#2e6fd0} .tg.ref{background:#8a8f9c}
+.warn{background:#fff4f1;border:1.5px dashed var(--red);border-radius:10px;padding:6px 10px;font-size:13.5px;color:#8c2216}
+.arrowr,.arrowd{color:var(--red);font-size:34px;font-weight:900;line-height:1;display:grid;place-items:center}
+.foot{margin-top:18px;background:var(--navy);color:#fff;border-radius:999px;text-align:center;font-size:21px;font-weight:800;padding:10px 20px}
+.foot em{font-style:normal;color:var(--yellow)}
+.pic{display:block;max-width:100%}
+.pic .ax{stroke:var(--ink);stroke-width:1.4} .pic .dash{stroke:var(--muted);stroke-dasharray:4 4}
+.pic .lab{font:12px "Noto Sans CJK KR",sans-serif;fill:var(--muted)} .pic .lab.b{fill:var(--ink);font-weight:700}
+.pic .bar{fill:#5a8de0} .pic .br{stroke:#3a7ec1;stroke-width:1.6}
+.pic .nd0{fill:#cfe3ff;stroke:#3a7ec1} .pic .nd1{fill:#ffc6d8;stroke:#c9406b} .pic .nd2{fill:#c9efd5;stroke:#2f9256}
+.pic .tl{font:italic 14.5px "STIX Two Text","Times New Roman",serif;fill:var(--ink)} .pic .tn{font:italic 700 16px "Times New Roman",serif;fill:var(--ink)}
+.pic .frame{fill:#fff;stroke:var(--ink)} .pic .va{fill:rgba(46,111,208,.25);stroke:var(--blue);stroke-width:2} .pic .vb{fill:rgba(47,146,86,.25);stroke:var(--green);stroke-width:2}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.note{background:#9cf26a;border-radius:6px;padding:8px 12px;font-size:15px;font-weight:700;color:#1d2a10}
+.chk{color:var(--green);font-weight:900}
+
+/* site version: single deliberate light "poster" look, fluid width, clickable blocks */
+html{background:var(--bg)}
+.sheet{width:100%;max-width:1500px;padding:20px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+.topnav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 16px}
+.topnav a.home{text-decoration:none;font-weight:800;color:var(--ink);background:#fff;border:1.5px solid #d9d2bf;border-radius:999px;padding:.3rem .9rem}
+.topnav .hint{color:var(--muted);font-size:14px}
+.box{transition:box-shadow .15s,transform .15s}
+.box:has(.go):hover{box-shadow:0 6px 18px rgba(24,58,115,.18);transform:translateY(-1px)}
+a.go{margin-left:auto;font-size:13px;font-weight:800;color:#fff;background:var(--c,var(--navy));border-radius:999px;padding:3px 12px;text-decoration:none;white-space:nowrap}
+.box h2 a.go::after{content:"";position:absolute;inset:0;border-radius:16px}
+.c-x a.go{display:inline-block;margin:8px auto 0;position:relative}
+.c-x a.go::after{content:"";position:absolute;inset:-400px -400px}
+.c-x{position:relative;overflow:hidden}
+a.it.lk{display:block;text-decoration:none;color:var(--ink);position:relative;z-index:2}
+a.it.lk:hover{border-color:var(--o)}
+a:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.pic{height:auto;max-width:100%}
+.it,.box{min-width:0}
+.it .f,.it .n,.warn{overflow-x:auto;overflow-y:hidden}
+.sheet{overflow-x:clip}
+mjx-container svg{max-width:none!important}
+@media (max-width:1100px){
+  .grid{grid-template-columns:minmax(0,1fr)!important}
+  .arrowr{transform:rotate(90deg);height:36px}
+  .title h1{font-size:24px;padding:6px 18px}
+  .foot{border-radius:16px;font-size:17px}
+}
+@media (max-width:560px){ .row2{grid-template-columns:1fr} .part{padding:16px 12px} }
+</style></head><body><div class="sheet"><nav class="topnav"><a class="home" href="../index.html">← 고등수학 목차 및 개념</a><span class="hint">블록을 누르면 개념 설명과 연습문제 15개(풀이 포함)로 갑니다</span></nav>
+
+<!-- ======================= 확률 ======================= -->
+<section class="part">
+<div class="title"><h1>고등학교 <em>확률</em> 개념 관계도</h1></div>
+<p class="sub">확률과 통계 Ⅰ 경우의 수 · Ⅱ 확률 (2022 개정 교육과정)</p>
+
+<div class="grid" style="grid-template-columns:1.05fr 46px 1fr 46px 1.2fr">
+ <div class="box c-o"><h2><span class="no">0</span>경우의 수의 기초 <small>공통수학1에서 배운 내용</small><a class="go" href="base.html">개념 · 15문제 →</a></h2>
+  <div class="row2">
+   <div class="it"><div class="h"><span class="pill">합의 법칙</span></div><div class="n">동시에 일어나지 않을 때 더한다</div><div class="f">$m+n$</div></div>
+   <div class="it"><div class="h"><span class="pill">곱의 법칙</span></div><div class="n">잇달아 일어날 때 곱한다</div><div class="f">$m\times n$</div></div>
+  </div>
+  <div class="items" style="margin-top:10px">
+   <div class="it"><div class="h"><span class="pill">순열</span> 순서 있게</div><div class="f">${}_nP_r=\dfrac{n!}{(n-r)!}$</div><div class="n">$n!=n(n-1)\cdots1,\ 0!=1$</div></div>
+   <div class="it"><div class="h"><span class="pill">조합</span> 순서 없이</div><div class="f">${}_nC_r=\dfrac{n!}{r!(n-r)!}$</div><div class="n">${}_nC_r={}_nC_{n-r}$</div></div>
+  </div>
+ </div>
+ <div class="arrowr">➜</div>
+ <div class="box c-p"><h2><span class="no">1</span>여러 가지 순열 <small>Ⅰ-1</small><a class="go" href="perm.html">개념 · 15문제 →</a></h2>
+  <div class="items">
+   <div class="it"><div class="h"><span class="pill">중복순열</span> 중복 허용 · 순서 중요</div><div class="f">${}_n\Pi_r=n^r$</div><div class="n">예: 0~9로 네 자리 비밀번호 $10^4$가지 ($r\gt n$도 가능)</div></div>
+   <div class="it"><div class="h"><span class="pill">같은 것이 있는 순열</span></div><div class="f">$\dfrac{n!}{p!\,q!\,r!}\quad(p+q+r=n)$</div><div class="n">예: 바둑판 최단 경로 →→→↑↑ : $\dfrac{5!}{3!\,2!}=10$</div></div>
+   <div class="it dim"><div class="h"><span class="pill">원순열</span></div><div class="f">$(n-1)!$</div><div class="n">2022 개정 확률과 통계에서 빠짐 (참고용)</div></div>
+  </div>
+ </div>
+ <div class="arrowr">➜</div>
+ <div class="box c-g"><h2><span class="no">2</span>중복조합과 이항정리 <small>Ⅰ-2</small><a class="go" href="comb.html">개념 · 15문제 →</a></h2>
+  <div class="items">
+   <div class="it"><div class="h"><span class="pill">중복조합</span> 중복 허용 · 순서 무관 </div><div class="f">${}_nH_r={}_{n+r-1}C_r$</div><div class="n">●와 칸막이 | 늘어놓기 · 예: $x+y+z=6$의 음이 아닌 정수해 ${}_3H_6={}_8C_6=28$</div></div>
+   <div class="it"><div class="h"><span class="pill">이항정리</span></div><div class="f">$(a+b)^n=\sum_{r=0}^{n}{}_nC_r\,a^{n-r}b^r$</div><div class="n">일반항 ${}_nC_r\,a^{n-r}b^r$ · $a=b=1$이면 ${}_nC_0+\cdots+{}_nC_n=2^n$</div></div>
+   <div class="it"><div class="h"><span class="pill">파스칼의 삼각형</span></div><div class="f">${}_nC_r={}_{n-1}C_{r-1}+{}_{n-1}C_r$</div><div class="n">위의 두 수를 더하면 아래 수</div></div>
+  </div>
+ </div>
+</div>
+
+<div class="arrowd" style="margin:6px 0">⬇</div>
+
+<div class="grid" style="grid-template-columns:1fr 46px 1.15fr">
+ <div class="box c-b"><h2><span class="no">3</span>확률의 뜻과 활용 <small>Ⅱ-1</small><a class="go" href="prob.html">개념 · 15문제 →</a></h2>
+  <div class="grid" style="grid-template-columns:1fr 210px;gap:12px;align-items:start">
+   <div class="items">
+    <div class="it"><div class="h"><span class="pill">수학적 확률</span> 같은 정도로 기대될 때</div><div class="f">$P(A)=\dfrac{n(A)}{n(S)}$</div><div class="n">사건 $A$가 일어나는 경우의 수 ÷ 전체 경우의 수</div></div>
+    <div class="it"><div class="h"><span class="pill">통계적 확률</span></div><div class="n">시행을 $n$번 반복해 $A$가 $r$번 일어나면, $n$이 클수록 상대도수 $\dfrac rn$이 일정한 값에 가까워진다 (큰 수의 법칙)</div></div>
+   </div>
+   <div><svg viewBox="0 0 200 120" width="200" height="120" class="pic">
+<rect x="2" y="2" width="196" height="116" rx="6" class="frame"/>
+<circle cx="78" cy="62" r="42" class="va"/><circle cx="122" cy="62" r="42" class="vb"/>
+<text x="56" y="68" class="tn">A</text><text x="134" y="68" class="tn">B</text><text x="100" y="66" class="lab b" text-anchor="middle">A∩B</text>
+<text x="10" y="16" class="lab">S</text></svg><div class="n" style="font-size:12.5px;color:var(--muted);margin-top:4px">표본공간 $S$, 사건 $A,B$</div></div>
+  </div>
+  <div class="it" style="margin-top:10px"><div class="h"><span class="pill">기본 성질과 덧셈정리</span></div>
+   <div class="f">$0\le P(A)\le1,\quad P(S)=1,\quad P(\varnothing)=0$</div>
+   <div class="f">$P(A\cup B)=P(A)+P(B)-P(A\cap B)$</div>
+   <div class="f">배반사건($A\cap B=\varnothing$)이면 $P(A\cup B)=P(A)+P(B)$ </div>
+   <div class="f">여사건 $P(A^c)=1-P(A)$ &nbsp;<span class="n">← "적어도 하나", "~이 아닌"일 때 </span></div>
+  </div>
+ </div>
+ <div class="arrowr">➜</div>
+ <div class="box c-k"><h2><span class="no">4</span>조건부확률과 독립 <small>Ⅱ-2</small><a class="go" href="cond.html">개념 · 15문제 →</a></h2>
+  <div class="grid" style="grid-template-columns:1fr 330px;gap:12px;align-items:start">
+   <div class="items">
+    <div class="it"><div class="h"><span class="pill">조건부확률</span></div><div class="f">$P(B|A)=\dfrac{P(A\cap B)}{P(A)}$</div><div class="n">단, $P(A)\gt0$ · 표본공간을 $A$로 줄여서 본다</div></div>
+    <div class="it"><div class="h"><span class="pill">곱셈정리</span></div><div class="f">$P(A\cap B)=P(A)\,P(B|A)$</div>
+     <div class="n">가지를 따라 곱하고 갈래끼리 더한다: $P(B)=P(A)P(B|A)+P(A^c)P(B|A^c)$ </div></div>
+   </div>
+   <div><svg viewBox="0 0 330 170" width="330" height="170" class="pic">
+<line x1="22" y1="85" x2="130" y2="40" class="br"/><line x1="22" y1="85" x2="130" y2="130" class="br"/>
+<line x1="138" y1="40" x2="245" y2="18" class="br"/><line x1="138" y1="40" x2="245" y2="62" class="br"/>
+<line x1="138" y1="130" x2="245" y2="108" class="br"/><line x1="138" y1="130" x2="245" y2="152" class="br"/>
+<circle cx="18" cy="85" r="8" class="nd0"/><circle cx="134" cy="40" r="8" class="nd1"/><circle cx="134" cy="130" r="8" class="nd2"/>
+<text x="62" y="50" class="tl">P(A)</text><text x="60" y="130" class="tl">P(Aᶜ)</text>
+<text x="128" y="24" class="tn">A</text><text x="126" y="156" class="tn">Aᶜ</text>
+<text x="250" y="22" class="tl">B : P(B|A)</text><text x="250" y="66" class="tl">Bᶜ : P(Bᶜ|A)</text>
+<text x="250" y="112" class="tl">B : P(B|Aᶜ)</text><text x="250" y="156" class="tl">Bᶜ : P(Bᶜ|Aᶜ)</text>
+</svg><div class="n" style="font-size:12.5px;color:var(--muted)">수형도: 가지를 따라 곱하고, 같은 결과끼리 더한다</div></div>
+  </div>
+  <div class="row2" style="margin-top:10px">
+   <div class="it"><div class="h"><span class="pill">독립</span> 서로 영향을 주지 않음</div><div class="f">$P(B|A)=P(B)$</div><div class="f">$\iff P(A\cap B)=P(A)P(B)$</div>
+    <div class="warn">배반($A\cap B=\varnothing$)과 독립은 다르다! 확률이 0이 아닌 두 사건이 배반이면 독립이 아니다. </div></div>
+   <div class="it"><div class="h"><span class="pill">독립시행의 확률</span></div><div class="n">한 번에 일어날 확률이 $p$인 시행을 $n$번 독립적으로 반복할 때 $r$번 일어날 확률 ($q=1-p$)</div>
+    <div class="f">${}_nC_r\,p^r\,q^{n-r}$</div><div class="n">→ 통계의 <b>이항분포</b>로 이어진다</div></div>
+  </div>
+ </div>
+</div>
+<div class="foot">핵심 흐름 : <em>경우의 수</em>를 세고 → <em>확률</em>을 구하고 → <em>조건부확률</em>과 <em>독립</em>을 판단한다 → <em>독립시행</em>은 이항분포로</div>
+</section>
+
+<!-- ======================= 통계 ======================= -->
+<section class="part">
+<div class="title"><h1>통계 <em>개념</em> 관계도</h1></div>
+<p class="sub">확률과 통계 Ⅲ 통계 : 확률분포 → 통계적 추정</p>
+
+<div class="grid" style="grid-template-columns:1.1fr 1fr 1fr">
+ <div class="box c-o"><h2><span class="no">1</span>앞 단원에서 가져올 것</h2>
+  <div class="row2">
+   <a class="it lk" href="comb.html#c2"><div class="h"><span class="pill">이항정리</span> ↗</div><div class="f" style="font-size:15px">$(a+b)^n=\sum{}_nC_r\,a^{n-r}b^r$</div></a>
+   <a class="it lk" href="cond.html#c3"><div class="h"><span class="pill">독립시행의 확률</span> ↗</div><div class="f" style="font-size:15px">$P(X=r)={}_nC_r\,p^rq^{n-r}$</div></a>
+  </div>
+  <div class="warn" style="margin-top:10px;background:#fff;border-color:var(--pink);color:var(--ink)"><span class="chk">✔</span> 이항분포 = 독립시행에서 <b>성공 횟수</b> $X$의 확률분포. 각 확률을 모두 더하면 이항정리에 의해 $(p+q)^n=1$</div>
+ </div>
+ <div class="box c-p"><h2><span class="no">2</span>이산확률변수 <a class="go" href="rv.html">개념 · 15문제 →</a></h2>
+  <div class="it"><div class="f" style="font-size:15px">$P(X=x_i)=p_i,\ \ \sum p_i=1$</div>
+   <div class="f" style="font-size:15px">평균 $E(X)=\sum x_ip_i$</div>
+   <div class="f" style="font-size:15px">분산 $V(X)=E(X^2)-\{E(X)\}^2$ <span class="n">(제평−평제) </span></div>
+   <div class="f" style="font-size:15px">표준편차 $\sigma(X)=\sqrt{V(X)}$</div></div>
+  <div class="it" style="margin-top:8px"><div class="f" style="font-size:15px">$E(aX+b)=aE(X)+b$</div><div class="f" style="font-size:15px">$V(aX+b)=a^2V(X),\ \sigma(aX+b)=|a|\sigma(X)$</div></div>
+ </div>
+ <div class="box c-b"><h2><span class="no">3</span>이산확률분포 : 이항분포<a class="go" href="binom.html">개념 · 15문제 →</a></h2>
+  <div class="it"><div class="f">$X\sim B(n,p)$</div><div class="f" style="font-size:15px">$E(X)=np,\ V(X)=npq,\ \sigma(X)=\sqrt{npq}$ </div></div>
+  <svg viewBox="0 0 280 120" width="280" height="120" class="pic"><rect x="15.0" y="99.7" width="21.2" height="0.3" class="bar"/><rect x="37.7" y="96.6" width="21.2" height="3.4" class="bar"/><rect x="60.5" y="84.6" width="21.2" height="15.4" class="bar"/><rect x="83.2" y="59.0" width="21.2" height="41.0" class="bar"/><rect x="105.9" y="28.3" width="21.2" height="71.7" class="bar"/><rect x="128.6" y="14.0" width="21.2" height="86.0" class="bar"/><rect x="151.4" y="28.3" width="21.2" height="71.7" class="bar"/><rect x="174.1" y="59.0" width="21.2" height="41.0" class="bar"/><rect x="196.8" y="84.6" width="21.2" height="15.4" class="bar"/><rect x="219.5" y="96.6" width="21.2" height="3.4" class="bar"/><rect x="242.3" y="99.7" width="21.2" height="0.3" class="bar"/><line x1="8" y1="100" x2="274" y2="100" class="ax"/><text x="26.363636363636363" y="115" class="lab" text-anchor="middle">0</text><text x="253.63636363636363" y="115" class="lab" text-anchor="middle">n</text><text x="140.0" y="115" class="lab b" text-anchor="middle">np</text></svg>
+ </div>
+</div>
+
+<div class="grid" style="grid-template-columns:0.9fr 1.45fr 1.05fr;margin-top:14px;align-items:stretch">
+ <div class="box c-x" style="display:flex;flex-direction:column;justify-content:center;text-align:center">
+  <div style="font-size:20px;font-weight:900">이항분포의 정규분포 근사</div><div><a class="go" href="approx.html">개념 · 15문제 →</a></div>
+  <div class="f" style="margin:8px 0">$n$이 충분히 크면<br>$B(n,p)\ \approx\ N(np,\ npq)$</div>
+  <div class="n">$np\Rightarrow m,\ \sqrt{npq}\Rightarrow\sigma$ 로 바꿔 표준화</div>
+  <div class="warn" style="margin-top:8px">큰 수의 법칙(상대도수 → 확률)과는 다른 이야기</div>
+ </div>
+ <div class="box c-g"><h2><span class="no">4</span>연속확률분포 : 정규분포<a class="go" href="normal.html">개념 · 15문제 →</a></h2>
+  <div class="grid" style="grid-template-columns:minmax(0,1fr) 280px;gap:10px">
+   <div class="items">
+    <div class="it"><div class="h"><span class="pill">확률밀도함수</span></div><div class="n">$f(x)\ge0$, 그래프와 $x$축 사이 전체 넓이 $=1$<br>$P(a\le X\le b)=$ 그 구간의 <b>넓이</b><br>한 점의 확률 $P(X=a)=0$</div></div>
+    <div class="it"><div class="f">$X\sim N(m,\sigma^2)$</div><div class="n">$x=m$에 대칭인 종 모양<br>$\sigma$가 클수록 낮고 넓게 퍼짐 </div></div>
+   </div>
+   <div><svg viewBox="0 0 280 140" width="280" height="140" class="pic"><polygon points="101.8,114.0 101.8,56.4 102.7,54.9 103.7,53.5 104.6,52.1 105.6,50.6 106.5,49.2 107.5,47.8 108.5,46.4 109.4,45.0 110.4,43.7 111.3,42.3 112.3,41.0 113.2,39.7 114.2,38.4 115.1,37.1 116.1,35.9 117.1,34.7 118.0,33.5 119.0,32.3 119.9,31.2 120.9,30.2 121.8,29.1 122.8,28.2 123.7,27.2 124.7,26.3 125.7,25.5 126.6,24.7 127.6,23.9 128.5,23.2 129.5,22.5 130.4,21.9 131.4,21.4 132.4,20.9 133.3,20.5 134.3,20.1 135.2,19.8 136.2,19.5 137.1,19.3 138.1,19.1 139.0,19.0 140.0,19.0 141.0,19.0 141.9,19.1 142.9,19.3 143.8,19.5 144.8,19.8 145.7,20.1 146.7,20.5 147.6,20.9 148.6,21.4 149.6,21.9 150.5,22.5 151.5,23.2 152.4,23.9 153.4,24.7 154.3,25.5 155.3,26.3 156.2,27.2 157.2,28.2 158.2,29.1 159.1,30.2 160.1,31.2 161.0,32.3 162.0,33.5 162.9,34.7 163.9,35.9 164.9,37.1 165.8,38.4 166.8,39.7 167.7,41.0 168.7,42.3 169.6,43.7 170.6,45.0 171.5,46.4 172.5,47.8 173.5,49.2 174.4,50.6 175.4,52.1 176.3,53.5 177.3,54.9 178.2,56.4 178.2,114.0" style="fill:var(--blue-soft)"/><line x1="6" y1="114.0" x2="274" y2="114.0" class="ax"/><polyline points="10.0,113.7 11.3,113.7 12.6,113.6 13.9,113.6 15.2,113.5 16.5,113.5 17.8,113.4 19.1,113.4 20.4,113.3 21.7,113.2 23.0,113.1 24.3,113.0 25.6,112.9 26.9,112.8 28.2,112.7 29.5,112.5 30.8,112.4 32.1,112.2 33.4,112.1 34.7,111.9 36.0,111.6 37.3,111.4 38.6,111.2 39.9,110.9 41.2,110.6 42.5,110.3 43.8,110.0 45.1,109.6 46.4,109.3 47.7,108.8 49.0,108.4 50.3,107.9 51.6,107.4 52.9,106.9 54.2,106.3 55.5,105.7 56.8,105.1 58.1,104.4 59.4,103.7 60.7,102.9 62.0,102.1 63.3,101.3 64.6,100.4 65.9,99.5 67.2,98.5 68.5,97.5 69.8,96.4 71.1,95.3 72.4,94.1 73.7,92.9 75.0,91.6 76.3,90.3 77.6,88.9 78.9,87.5 80.2,86.0 81.5,84.5 82.8,83.0 84.1,81.4 85.4,79.7 86.7,78.1 88.0,76.3 89.3,74.6 90.6,72.8 91.9,70.9 93.2,69.1 94.5,67.2 95.8,65.3 97.1,63.4 98.4,61.4 99.7,59.5 101.0,57.5 102.3,55.6 103.6,53.6 104.9,51.7 106.2,49.7 107.5,47.8 108.8,45.9 110.1,44.0 111.4,42.2 112.7,40.4 114.0,38.6 115.3,36.9 116.6,35.2 117.9,33.6 119.2,32.1 120.5,30.6 121.8,29.2 123.1,27.9 124.4,26.6 125.7,25.4 127.0,24.3 128.3,23.4 129.6,22.5 130.9,21.7 132.2,21.0 133.5,20.4 134.8,19.9 136.1,19.5 137.4,19.2 138.7,19.1 140.0,19.0 141.3,19.1 142.6,19.2 143.9,19.5 145.2,19.9 146.5,20.4 147.8,21.0 149.1,21.7 150.4,22.5 151.7,23.4 153.0,24.3 154.3,25.4 155.6,26.6 156.9,27.9 158.2,29.2 159.5,30.6 160.8,32.1 162.1,33.6 163.4,35.2 164.7,36.9 166.0,38.6 167.3,40.4 168.6,42.2 169.9,44.0 171.2,45.9 172.5,47.8 173.8,49.7 175.1,51.7 176.4,53.6 177.7,55.6 179.0,57.5 180.3,59.5 181.6,61.4 182.9,63.4 184.2,65.3 185.5,67.2 186.8,69.1 188.1,70.9 189.4,72.8 190.7,74.6 192.0,76.3 193.3,78.1 194.6,79.7 195.9,81.4 197.2,83.0 198.5,84.5 199.8,86.0 201.1,87.5 202.4,88.9 203.7,90.3 205.0,91.6 206.3,92.9 207.6,94.1 208.9,95.3 210.2,96.4 211.5,97.5 212.8,98.5 214.1,99.5 215.4,100.4 216.7,101.3 218.0,102.1 219.3,102.9 220.6,103.7 221.9,104.4 223.2,105.1 224.5,105.7 225.8,106.3 227.1,106.9 228.4,107.4 229.7,107.9 231.0,108.4 232.3,108.8 233.6,109.3 234.9,109.6 236.2,110.0 237.5,110.3 238.8,110.6 240.1,110.9 241.4,111.2 242.7,111.4 244.0,111.6 245.3,111.9 246.6,112.1 247.9,112.2 249.2,112.4 250.5,112.5 251.8,112.7 253.1,112.8 254.4,112.9 255.7,113.0 257.0,113.1 258.3,113.2 259.6,113.3 260.9,113.4 262.2,113.4 263.5,113.5 264.8,113.5 266.1,113.6 267.4,113.6 268.7,113.7 270.0,113.7" style="fill:none;stroke:var(--blue);stroke-width:2.4"/><line x1="140.0" y1="114.0" x2="140.0" y2="19.013742761563634" class="dash"/><line x1="63.52941176470588" y1="111.0" x2="63.52941176470588" y2="117.0" class="ax"/><text x="63.52941176470588" y="130.0" class="lab" text-anchor="middle">m−2σ</text><line x1="101.76470588235294" y1="111.0" x2="101.76470588235294" y2="117.0" class="ax"/><text x="101.76470588235294" y="130.0" class="lab" text-anchor="middle">m−σ</text><line x1="140.0" y1="111.0" x2="140.0" y2="117.0" class="ax"/><text x="140.0" y="130.0" class="lab" text-anchor="middle">m</text><line x1="178.23529411764707" y1="111.0" x2="178.23529411764707" y2="117.0" class="ax"/><text x="178.23529411764707" y="130.0" class="lab" text-anchor="middle">m+σ</text><line x1="216.47058823529414" y1="111.0" x2="216.47058823529414" y2="117.0" class="ax"/><text x="216.47058823529414" y="130.0" class="lab" text-anchor="middle">m+2σ</text><text x="140.0" y="75.9047619047619" class="lab b" text-anchor="middle">약 68%</text></svg><div class="n" style="font-size:12.5px;color:var(--muted)">$m\pm\sigma$ 약 68%, $m\pm2\sigma$ 약 95%</div>
+    <div style="font-weight:800;color:var(--blue);margin-top:6px">면적이 확률! <span style="color:var(--red)">(곡선의 높이가 아님)</span></div></div>
+  </div>
+ </div>
+ <div class="box c-k"><h2><span class="no">5</span>표준정규분포와 표준화<a class="go" href="std.html">개념 · 15문제 →</a></h2>
+  <div class="it"><div class="f">$Z=\dfrac{X-m}{\sigma}\ \sim\ N(0,1)$</div>
+   <div class="n">표준정규분포표로 $P(0\le Z\le z)$를 읽는다. $P(Z\ge0)=0.5$ <br>예: $P(0\le Z\le1)\approx0.3413,\ P(0\le Z\le2)\approx0.4772$</div></div>
+  <svg viewBox="0 0 300 120" width="300" height="120" class="pic"><polygon points="150.0,94.0 150.0,18.0 150.6,18.0 151.2,18.0 151.9,18.1 152.5,18.1 153.1,18.2 153.7,18.3 154.3,18.4 154.9,18.6 155.6,18.7 156.2,18.9 156.8,19.0 157.4,19.2 158.0,19.4 158.6,19.7 159.3,19.9 159.9,20.2 160.5,20.4 161.1,20.7 161.7,21.0 162.4,21.4 163.0,21.7 163.6,22.0 164.2,22.4 164.8,22.8 165.4,23.2 166.1,23.6 166.7,24.0 167.3,24.4 167.9,24.9 168.5,25.3 169.1,25.8 169.8,26.3 170.4,26.8 171.0,27.3 171.6,27.8 172.2,28.3 172.9,28.9 173.5,29.4 174.1,30.0 174.7,30.5 175.3,31.1 175.9,31.7 176.6,32.3 177.2,32.9 177.8,33.5 178.4,34.1 179.0,34.7 179.6,35.4 180.3,36.0 180.9,36.6 181.5,37.3 182.1,37.9 182.7,38.6 183.4,39.3 184.0,39.9 184.6,40.6 185.2,41.3 185.8,42.0 186.4,42.6 187.1,43.3 187.7,44.0 188.3,44.7 188.9,45.4 189.5,46.1 190.1,46.8 190.8,47.4 191.4,48.1 192.0,48.8 192.6,49.5 193.2,50.2 193.9,50.9 194.5,51.6 195.1,52.3 195.7,53.0 196.3,53.6 196.9,54.3 197.6,55.0 198.2,55.7 198.8,56.3 199.4,57.0 199.4,94.0" style="fill:var(--pink-soft)"/><line x1="6" y1="94.0" x2="294" y2="94.0" class="ax"/><polyline points="10.0,93.8 11.4,93.7 12.8,93.7 14.2,93.7 15.6,93.6 17.0,93.6 18.4,93.5 19.8,93.5 21.2,93.4 22.6,93.4 24.0,93.3 25.4,93.2 26.8,93.1 28.2,93.0 29.6,92.9 31.0,92.8 32.4,92.7 33.8,92.6 35.2,92.4 36.6,92.3 38.0,92.1 39.4,91.9 40.8,91.7 42.2,91.5 43.6,91.3 45.0,91.1 46.4,90.8 47.8,90.5 49.2,90.2 50.6,89.9 52.0,89.5 53.4,89.2 54.8,88.8 56.2,88.3 57.6,87.9 59.0,87.4 60.4,86.9 61.8,86.3 63.2,85.8 64.6,85.2 66.0,84.5 67.4,83.8 68.8,83.1 70.2,82.4 71.6,81.6 73.0,80.8 74.4,79.9 75.8,79.0 77.2,78.1 78.6,77.1 80.0,76.1 81.4,75.0 82.8,73.9 84.2,72.8 85.6,71.6 87.0,70.4 88.4,69.2 89.8,67.9 91.2,66.6 92.6,65.2 94.0,63.9 95.4,62.5 96.8,61.0 98.2,59.6 99.6,58.1 101.0,56.6 102.4,55.0 103.8,53.5 105.2,52.0 106.6,50.4 108.0,48.8 109.4,47.3 110.8,45.7 112.2,44.1 113.6,42.6 115.0,41.1 116.4,39.5 117.8,38.0 119.2,36.6 120.6,35.1 122.0,33.7 123.4,32.3 124.8,31.0 126.2,29.7 127.6,28.5 129.0,27.3 130.4,26.1 131.8,25.1 133.2,24.1 134.6,23.1 136.0,22.3 137.4,21.5 138.8,20.8 140.2,20.1 141.6,19.6 143.0,19.1 144.4,18.7 145.8,18.4 147.2,18.2 148.6,18.1 150.0,18.0 151.4,18.1 152.8,18.2 154.2,18.4 155.6,18.7 157.0,19.1 158.4,19.6 159.8,20.1 161.2,20.8 162.6,21.5 164.0,22.3 165.4,23.1 166.8,24.1 168.2,25.1 169.6,26.1 171.0,27.3 172.4,28.5 173.8,29.7 175.2,31.0 176.6,32.3 178.0,33.7 179.4,35.1 180.8,36.6 182.2,38.0 183.6,39.5 185.0,41.1 186.4,42.6 187.8,44.1 189.2,45.7 190.6,47.3 192.0,48.8 193.4,50.4 194.8,52.0 196.2,53.5 197.6,55.0 199.0,56.6 200.4,58.1 201.8,59.6 203.2,61.0 204.6,62.5 206.0,63.9 207.4,65.2 208.8,66.6 210.2,67.9 211.6,69.2 213.0,70.4 214.4,71.6 215.8,72.8 217.2,73.9 218.6,75.0 220.0,76.1 221.4,77.1 222.8,78.1 224.2,79.0 225.6,79.9 227.0,80.8 228.4,81.6 229.8,82.4 231.2,83.1 232.6,83.8 234.0,84.5 235.4,85.2 236.8,85.8 238.2,86.3 239.6,86.9 241.0,87.4 242.4,87.9 243.8,88.3 245.2,88.8 246.6,89.2 248.0,89.5 249.4,89.9 250.8,90.2 252.2,90.5 253.6,90.8 255.0,91.1 256.4,91.3 257.8,91.5 259.2,91.7 260.6,91.9 262.0,92.1 263.4,92.3 264.8,92.4 266.2,92.6 267.6,92.7 269.0,92.8 270.4,92.9 271.8,93.0 273.2,93.1 274.6,93.2 276.0,93.3 277.4,93.4 278.8,93.4 280.2,93.5 281.6,93.5 283.0,93.6 284.4,93.6 285.8,93.7 287.2,93.7 288.6,93.7 290.0,93.8" style="fill:none;stroke:var(--pink);stroke-width:2.4"/><line x1="150.0" y1="94.0" x2="150.0" y2="18.01099420925091" class="dash"/><text x="150.0" y="63.52380952380952" class="lab b" text-anchor="middle">P(0≤Z≤z)</text></svg>
+  <div class="note">평균을 빼서 중심을 0으로, 표준편차로 나눠 퍼짐을 1로 맞춘다.<br>"평균에서 얼마나 떨어졌나?" → "표준편차 몇 개만큼인가?"</div>
+ </div>
+</div>
+
+<div class="arrowd" style="margin:6px 0">⬇</div>
+
+<div class="grid" style="grid-template-columns:1.05fr 46px 1fr 1fr">
+ <div class="box c-t"><h2><span class="no">6</span>표본평균의 분포 <a class="go" href="sample.html">개념 · 15문제 →</a></h2>
+  <div class="it"><div class="n">모집단 → 크기 $n$인 표본을 <b>임의추출</b></div>
+   <div class="f">$E(\overline X)=m,\ V(\overline X)=\dfrac{\sigma^2}{n},\ \sigma(\overline X)=\dfrac{\sigma}{\sqrt n}$ </div>
+   <div class="f">$\overline X\sim N\!\left(m,\ \dfrac{\sigma^2}{n}\right)$</div>
+   <div class="n">모집단이 정규분포이면 정확히, 아니어도 $n$이 크면 근사적으로 성립<br>$\sigma$를 모르면 $n$이 클 때 표본표준편차 $s$를 대신 쓴다 </div></div>
+ </div>
+ <div class="arrowr">➜</div>
+ <div class="box c-b"><h2><span class="no">7</span>모평균의 추정<a class="go" href="mean.html">개념 · 15문제 →</a></h2>
+  <div class="it"><div class="f" style="font-size:15px">$P\!\left(-1.96\le\dfrac{\overline X-m}{\sigma/\sqrt n}\le1.96\right)=0.95$</div>
+   <div class="f">신뢰도 95% : $\overline x-1.96\dfrac{\sigma}{\sqrt n}\le m\le\overline x+1.96\dfrac{\sigma}{\sqrt n}$</div>
+   <div class="f">신뢰도 99% : $\overline x\pm2.58\dfrac{\sigma}{\sqrt n}$ </div>
+   <div class="n">신뢰구간의 길이 $=2k\dfrac{\sigma}{\sqrt n}$ → $n$을 4배로 하면 길이는 $\dfrac12$ </div></div>
+ </div>
+ <div class="box c-g"><h2><span class="no">8</span>모비율의 추정 <a class="go" href="ratio.html">개념 · 15문제 →</a></h2>
+  <div class="it"><div class="n">2022 개정에서 새로 들어온 내용</div>
+   <div class="f">표본비율 $\hat p=\dfrac Xn,\ \ \hat q=1-\hat p$</div>
+   <div class="n">$n$이 충분히 크면 $\hat p\approx N\!\left(p,\dfrac{pq}{n}\right)$</div>
+   <div class="f">신뢰도 95% : $\hat p\pm1.96\sqrt{\dfrac{\hat p\hat q}{n}}$</div>
+   <div class="n">계산기·스프레드시트 같은 공학 도구를 활용</div></div>
+ </div>
+</div>
+<div class="foot">핵심 흐름 : <em>확률변수</em> → <em>확률분포</em>(이항·정규) → <em>표준화</em> → <em>표본평균·표본비율</em>의 분포 → <em>모평균·모비율</em> 추정</div>
+</section>
+</div></body></html>

@@ -224,7 +224,7 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
 .pager a:hover{border-color:var(--accent)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
-/* ---------- 고등수학 숲지도 additions ---------- */
+/* ---------- 고등수학 목차 및 개념 additions ---------- */
 :root{--g5:#b8326a}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--g5:#f07aa8}}
 :root[data-theme="dark"]{--g5:#f07aa8}
@@ -241,9 +241,11 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
 .row.pair-end{margin-bottom:8px}
 .drillbox{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-decoration:none;color:var(--fg)}
 .drillbox:hover{border-color:var(--g3);background:var(--accent-soft)}
-.drillbox b{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.drillbox b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;word-break:keep-all}
 .drillbox .dsub{font-size:.84rem;color:var(--muted);line-height:1.5}
 .drillbox .dgo{font-size:.84rem;font-weight:700;color:var(--g3);margin-top:4px}
+.drillbox .dgo.dgo-prob{color:var(--ge)}
+.drillbox.k-prob:hover{border-color:var(--ge)}
 .cell.blank{background:transparent;border:none}
 .row.drill .area{color:var(--muted)}
 .row.drill{margin-bottom:8px}
