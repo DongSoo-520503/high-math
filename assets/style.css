@@ -245,6 +245,8 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
 .drillbox .dsub{font-size:.84rem;color:var(--muted);line-height:1.5}
 .drillbox .dgo{font-size:.84rem;font-weight:700;color:var(--g3);margin-top:4px}
 .drillbox .dgo.dgo-prob{color:var(--ge)}
+.drillbox .dgo.dgo-h2{color:var(--g2)}
+.drillbox.k-h2:hover{border-color:var(--g2)}
 .drillbox.k-prob:hover{border-color:var(--ge)}
 .cell.blank{background:transparent;border:none}
 .row.drill .area{color:var(--muted)}
