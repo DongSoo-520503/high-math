@@ -239,6 +239,14 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
 .cell.k-calc::before{background:var(--g3)} .cell.k-geom::before{background:var(--g5)}
 .grp{display:inline-block;font-size:.74rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 .5rem;margin-bottom:6px;line-height:1.6}
 .row.pair-end{margin-bottom:8px}
+.drillbox{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-decoration:none;color:var(--fg)}
+.drillbox:hover{border-color:var(--g3);background:var(--accent-soft)}
+.drillbox b{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.drillbox .dsub{font-size:.84rem;color:var(--muted);line-height:1.5}
+.drillbox .dgo{font-size:.84rem;font-weight:700;color:var(--g3);margin-top:4px}
+.cell.blank{background:transparent;border:none}
+.row.drill .area{color:var(--muted)}
+.row.drill{margin-bottom:8px}
 .row.sn .cell{font-size:.82rem;text-align:center;color:var(--muted);background:transparent;border-style:dashed;padding:8px 6px}
 .row.sn .cell b{color:var(--fg)}
 .row.sn .area{font-size:1rem}
@@ -250,7 +258,7 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
 .pascal{display:grid;gap:4px;justify-items:center;margin:1rem 0;padding:.6rem;font-family:var(--f-math);font-size:1.05rem;background:var(--paper);border:1px solid var(--line);border-radius:10px}
 .pascal div{display:flex;gap:.7rem}
 .pascal span{min-width:1.5rem;text-align:center}
-.links a.mid::after{content:" ↗";color:var(--muted);font-size:.85em}
+.links a.mid::after,.stage a.mid::after{content:" ↗";color:var(--muted);font-size:.85em}
 .tbl td{overflow-wrap:anywhere}
 .stage{font-size:.82rem;color:var(--muted);margin:.3rem 0 0}
 @media (max-width:900px){
@@ -260,4 +268,6 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
   .map .area::before{content:"줄 "}
   .cell::before{display:block}
   .row.sn .area::before{content:""}
+  .cell.blank{display:none}
+  .row.drill .area::before{content:""}
 }
