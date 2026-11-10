@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>확률과 통계 개념관계도</title><meta name="description" content="확률과 통계 전체를 두 장의 관계도로 보고, 블록마다 개념과 연습문제 15개를 푸는 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&family=STIX+Two+Text:ital@0;1&display=swap">
+<link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="pm.css">
+<style>
+.pmhero{margin:4px 0 14px}
+.pmhero h1{font-family:var(--f-display);font-size:clamp(1.6rem,4vw,2.4rem);margin:0 0 4px}
+.pmhero p{margin:0;color:var(--muted)}
+.pmtabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.pmtabs a{text-decoration:none;font-weight:800;color:var(--fg);border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:.3rem 1rem}
+.pmtabs a:hover{border-color:var(--accent)}
+.part{margin:0 0 34px}
+.part h2{font-family:var(--f-display);font-size:1.5rem;margin:0 0 10px;display:flex;align-items:center;gap:.5rem}
+.part h2 .chip{font-size:.8rem}
+figure.map{margin:0 0 12px}
+.mapbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 4px 18px rgba(20,40,80,.08);background:#fbf6ea}
+.mapbox img{display:block;width:100%;height:auto}
+a.hs{position:absolute;border-radius:16px;outline:0 solid transparent;transition:background .15s,box-shadow .15s}
+a.hs:hover,a.hs:focus-visible{background:rgba(23,58,115,.07);box-shadow:inset 0 0 0 3px rgba(23,58,115,.55)}
+figure.map figcaption{text-align:right;font-size:.85rem;margin-top:4px}
+figure.map figcaption a{color:var(--muted)}
+.blk{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+a.bt{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--fg);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:.55rem .75rem;min-width:0}
+a.bt:hover,a.bt:focus-visible{border-color:var(--accent);background:var(--accent-soft)}
+a.bt .no{flex:none;width:1.7rem;height:1.7rem;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--g1);font-size:.85rem}
+.p-stat a.bt .no{background:var(--g2)}
+a.bt .t{font-weight:700;min-width:0;word-break:keep-all}
+a.bt .go{margin-left:auto;flex:none;font-size:1rem;color:var(--accent);font-weight:700}
+.prt{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;background:var(--paper);font-size:.92rem}
+.prt b{margin-right:.4rem}
+.prt a{margin-right:.9rem;white-space:nowrap}
+@media (max-width:640px){ .mapbox{border-radius:10px} }
+</style></head>
+<body><div class="wrap wide">
+<nav class="topbar"><a class="home" href="../index.html">← 고등수학 목차 및 개념</a><span class="crumb">관계도의 블록을 누르면 개념 설명과 연습문제 15개(풀이 포함)로 갑니다</span></nav>
+<header class="pmhero"><h1>확률과 통계 개념관계도</h1><p>경우의 수 → 확률 → 조건부확률·독립 → 이항분포 → 정규분포 → 추정</p></header>
+<nav class="pmtabs"><a href="#prob">확률</a><a href="#stat">통계</a><a href="#print">인쇄용 파일</a></nav>
+<section class="part p-prob"><h2>확률 <span class="chip c-prob2">Ⅰ·Ⅱ</span></h2>
+<figure class="map" id="prob"><div class="mapbox"><img src="img/prob-map.webp" width="2700" height="1910" alt="고등학교 확률 개념 관계도: ① 경우의 수의 기본 원리(합의 법칙, 곱의 법칙) → ② 순열 → ③ 조합 → ④ 여러 가지 순열과 조합(중복순열, 같은 것이 있는 순열, 중복조합, 이항정리), ⑤ 확률의 뜻과 기본 성질, ⑥ 조건부확률과 독립(독립시행은 이항분포로)" decoding="async"><a class="hs" href="base.html#c1" style="left:2.000%;top:7.855%;width:31.444%;height:29.851%" title="① 경우의 수의 기본 원리 — 개념 · 15문제" aria-label="① 경우의 수의 기본 원리: 개념과 연습문제"></a><a class="hs" href="base.html#c2" style="left:37.778%;top:7.855%;width:27.222%;height:29.851%" title="② 순열 — 개념 · 15문제" aria-label="② 순열: 개념과 연습문제"></a><a class="hs" href="base.html#c2" style="left:68.889%;top:7.855%;width:29.111%;height:29.851%" title="③ 조합 — 개념 · 15문제" aria-label="③ 조합: 개념과 연습문제"></a><a class="hs" href="perm.html" style="left:43.333%;top:43.048%;width:54.667%;height:5.656%" title="④ 여러 가지 순열과 조합 — 개념 · 15문제" aria-label="④ 여러 가지 순열과 조합: 개념과 연습문제"></a><a class="hs" href="perm.html" style="left:43.444%;top:48.704%;width:12.667%;height:13.354%" title="원순열(참고) — 개념 · 15문제" aria-label="원순열(참고): 개념과 연습문제"></a><a class="hs" href="perm.html#c1" style="left:56.111%;top:48.704%;width:10.333%;height:13.354%" title="중복순열 — 개념 · 15문제" aria-label="중복순열: 개념과 연습문제"></a><a class="hs" href="perm.html#c2" style="left:66.444%;top:48.704%;width:10.667%;height:13.354%" title="같은 것이 있는 순열 — 개념 · 15문제" aria-label="같은 것이 있는 순열: 개념과 연습문제"></a><a class="hs" href="comb.html#c1" style="left:77.111%;top:48.704%;width:10.667%;height:13.354%" title="중복조합 — 개념 · 15문제" aria-label="중복조합: 개념과 연습문제"></a><a class="hs" href="comb.html#c2" style="left:87.778%;top:48.704%;width:10.222%;height:13.354%" title="이항정리·파스칼의 삼각형 — 개념 · 15문제" aria-label="이항정리·파스칼의 삼각형: 개념과 연습문제"></a><a class="hs" href="prob.html" style="left:2.000%;top:46.033%;width:39.111%;height:47.447%" title="⑤ 확률의 뜻과 기본 성질 — 개념 · 15문제" aria-label="⑤ 확률의 뜻과 기본 성질: 개념과 연습문제"></a><a class="hs" href="cond.html" style="left:46.111%;top:64.886%;width:51.889%;height:28.594%" title="⑥ 조건부확률과 독립 — 개념 · 15문제" aria-label="⑥ 조건부확률과 독립: 개념과 연습문제"></a><a class="hs" href="cond.html#c3" style="left:47.333%;top:88.767%;width:22.889%;height:3.456%" title="독립시행의 확률 — 개념 · 15문제" aria-label="독립시행의 확률: 개념과 연습문제"></a></div><figcaption><a href="img/prob-map.webp" target="_blank" rel="noopener">크게 보기 ↗</a></figcaption></figure>
+<div class="blk"><a class="bt" href="base.html"><span class="no">0</span><span class="t" title="개념 · 15문제">경우의 수의 기초</span><span class="go">→</span></a><a class="bt" href="perm.html"><span class="no">1</span><span class="t" title="개념 · 15문제">여러 가지 순열</span><span class="go">→</span></a><a class="bt" href="comb.html"><span class="no">2</span><span class="t" title="개념 · 15문제">중복조합과 이항정리</span><span class="go">→</span></a><a class="bt" href="prob.html"><span class="no">3</span><span class="t" title="개념 · 15문제">확률의 뜻과 활용</span><span class="go">→</span></a><a class="bt" href="cond.html"><span class="no">4</span><span class="t" title="개념 · 15문제">조건부확률과 독립</span><span class="go">→</span></a></div>
+</section>
+<section class="part p-stat"><h2>통계 <span class="chip c-stat">Ⅲ</span></h2>
+<figure class="map" id="stat"><div class="mapbox"><img src="img/stat-map.webp" width="2700" height="1910" alt="통계 개념 관계도: ① 확률의 기초(이항정리, 독립시행) → ② 이산확률분포: 이항분포 ↔ ③ 연속확률분포: 정규분포, ④ 중심극한정리와 표본평균의 분포, ⑤ 표준정규분포와 표준화, ⑥ 모평균의 추정, ⑦ 모비율의 추정" decoding="async"><a class="hs" href="binom.html" style="left:3.333%;top:7.541%;width:93.333%;height:13.040%" title="① 확률의 기초 — 개념 · 15문제" aria-label="① 확률의 기초: 개념과 연습문제"></a><a class="hs" href="comb.html#c2" style="left:5.000%;top:12.176%;width:27.778%;height:7.541%" title="이항정리 — 개념 · 15문제" aria-label="이항정리: 개념과 연습문제"></a><a class="hs" href="cond.html#c3" style="left:37.222%;top:10.369%;width:28.889%;height:9.269%" title="독립시행의 확률 — 개념 · 15문제" aria-label="독립시행의 확률: 개념과 연습문제"></a><a class="hs" href="binom.html" style="left:3.333%;top:24.195%;width:34.444%;height:23.881%" title="② 이산확률분포: 이항분포 — 개념 · 15문제" aria-label="② 이산확률분포: 이항분포: 개념과 연습문제"></a><a class="hs" href="rv.html#c2" style="left:6.667%;top:38.020%;width:27.778%;height:3.142%" title="분산 = 제평−평제 — 개념 · 15문제" aria-label="분산 = 제평−평제: 개념과 연습문제"></a><a class="hs" href="approx.html" style="left:39.167%;top:27.494%;width:12.889%;height:18.068%" title="이항분포의 정규분포 근사 — 개념 · 15문제" aria-label="이항분포의 정규분포 근사: 개념과 연습문제"></a><a class="hs" href="normal.html" style="left:52.778%;top:24.195%;width:43.889%;height:23.881%" title="③ 연속확률분포: 정규분포 — 개념 · 15문제" aria-label="③ 연속확률분포: 정규분포: 개념과 연습문제"></a><a class="hs" href="sample.html" style="left:3.333%;top:51.846%;width:43.333%;height:19.089%" title="④ 중심극한정리와 표본평균의 분포 — 개념 · 15문제" aria-label="④ 중심극한정리와 표본평균의 분포: 개념과 연습문제"></a><a class="hs" href="approx.html" style="left:31.389%;top:55.931%;width:14.222%;height:13.354%" title="이항분포의 정규분포 근사 — 개념 · 15문제" aria-label="이항분포의 정규분포 근사: 개념과 연습문제"></a><a class="hs" href="std.html" style="left:50.000%;top:51.846%;width:46.667%;height:19.089%" title="⑤ 표준정규분포와 표준화 — 개념 · 15문제" aria-label="⑤ 표준정규분포와 표준화: 개념과 연습문제"></a><a class="hs" href="std.html#c1" style="left:3.333%;top:78.555%;width:28.889%;height:19.639%" title="표준화의 뜻 — 개념 · 15문제" aria-label="표준화의 뜻: 개념과 연습문제"></a><a class="hs" href="ratio.html" style="left:33.889%;top:75.884%;width:27.778%;height:22.781%" title="⑦ 모비율의 추정 — 개념 · 15문제" aria-label="⑦ 모비율의 추정: 개념과 연습문제"></a><a class="hs" href="mean.html" style="left:62.778%;top:75.884%;width:33.889%;height:22.781%" title="⑥ 모평균의 추정 — 개념 · 15문제" aria-label="⑥ 모평균의 추정: 개념과 연습문제"></a></div><figcaption><a href="img/stat-map.webp" target="_blank" rel="noopener">크게 보기 ↗</a></figcaption></figure>
+<div class="blk"><a class="bt" href="rv.html"><span class="no">2</span><span class="t" title="개념 · 15문제">이산확률변수</span><span class="go">→</span></a><a class="bt" href="binom.html"><span class="no">3</span><span class="t" title="개념 · 15문제">이항분포</span><span class="go">→</span></a><a class="bt" href="approx.html"><span class="no">★</span><span class="t" title="개념 · 15문제">이항분포의 정규분포 근사</span><span class="go">→</span></a><a class="bt" href="normal.html"><span class="no">4</span><span class="t" title="개념 · 15문제">연속확률분포 · 정규분포</span><span class="go">→</span></a><a class="bt" href="std.html"><span class="no">5</span><span class="t" title="개념 · 15문제">표준정규분포와 표준화</span><span class="go">→</span></a><a class="bt" href="sample.html"><span class="no">6</span><span class="t" title="개념 · 15문제">표본평균의 분포</span><span class="go">→</span></a><a class="bt" href="mean.html"><span class="no">7</span><span class="t" title="개념 · 15문제">모평균의 추정</span><span class="go">→</span></a><a class="bt" href="ratio.html"><span class="no">8</span><span class="t" title="개념 · 15문제">모비율의 추정</span><span class="go">→</span></a></div>
+</section>
+<section class="prt" id="print"><b>인쇄용 (A4 가로)</b>
+<a href="print/prob-stat-map-a4-duplex.pdf">확률+통계 양면 PDF</a><a href="print/prob-map-a4.pdf">확률 PDF</a><a href="print/stat-map-a4.pdf">통계 PDF</a></section>
+</div>
+<script src="../assets/app.js"></script>
+</body></html>
