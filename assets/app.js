@@ -10,6 +10,12 @@
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
       if (b.classList.contains('big')) b.textContent = on ? '✓ 이해했어요' : '이 단원을 이해했어요';
     });
+    document.querySelectorAll('[data-mark]').forEach(function (m) { m.classList.toggle('isdone', done.indexOf(m.getAttribute('data-mark')) > -1); });
+    var p2 = document.getElementById('prog2');
+    if (p2) {
+      var ids = p2.getAttribute('data-ids').split(',');
+      p2.querySelector('b').textContent = ids.filter(function (d) { return done.indexOf(d) > -1; }).length;
+    }
     var p = document.getElementById('prog');
     if (p) {
       var total = document.querySelectorAll('.chk[data-done]').length;

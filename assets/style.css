@@ -265,6 +265,32 @@ details.q .a{padding:0 1rem .85rem 3.4rem;color:var(--fg)}
 .links a.mid::after,.stage a.mid::after{content:" ↗";color:var(--muted);font-size:.85em}
 .tbl td{overflow-wrap:anywhere}
 .stage{font-size:.82rem;color:var(--muted);margin:.3rem 0 0}
+/* concept-page drill (15 problems) */
+.quiz.drill .qhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.quiz.drill .qhead h2{margin:0}
+.qnote{color:var(--muted);font-size:.9rem;margin:.3rem 0 0}
+.pgrp{margin-top:22px}
+.pgrp>h3{font-family:var(--f-display);font-weight:400;font-size:1.2rem;display:flex;align-items:baseline;gap:.6rem;margin:0 0 .4rem}
+.pgrp>h3 small{font-family:var(--f-body);font-size:.85rem;color:var(--muted)}
+.prob{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:6px 10px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin:.6rem 0}
+.prob .qn{grid-row:span 2}
+.prob .qt{min-width:0;overflow-x:auto;overflow-y:hidden;line-height:1.85}
+details.sol{min-width:0}
+details.sol summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem;font-size:.85rem;font-weight:700;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;padding:.12rem .8rem}
+details.sol summary::-webkit-details-marker{display:none}
+details.sol summary::before{content:"▸";font-size:.8em}
+details.sol[open] summary::before{content:"▾"}
+details.sol[open] summary{background:var(--accent);color:var(--paper)}
+details.sol .a{margin-top:.6rem;padding:.6rem .8rem;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;line-height:1.95;overflow-x:auto;overflow-y:hidden}
+mjx-container svg{max-width:none!important}
+.more{margin-top:26px}
+.more h2{font-size:1.2rem;margin-bottom:.5rem}
+.morel{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.morel a{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--fg);font-weight:700;background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:.55rem .8rem}
+.morel a small{font-weight:400;font-size:.76rem;color:var(--muted)}
+.morel a:hover,.morel a:focus-visible{border-color:var(--accent);background:var(--accent-soft)}
+/* done marks on sub-site indexes */
+[data-mark].isdone::after{content:" ✓";color:var(--ge);font-weight:800}
 @media (max-width:900px){
   .map .colhead{display:none}
   .map .row{grid-template-columns:1fr;gap:8px}
