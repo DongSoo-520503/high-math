@@ -290,6 +290,7 @@ mjx-container svg{max-width:none!important}
 .morel a small{font-weight:400;font-size:.76rem;color:var(--muted)}
 .morel a:hover,.morel a:focus-visible{border-color:var(--accent);background:var(--accent-soft)}
 /* done marks on sub-site indexes */
+.g-pt3{fill:var(--muted)}
 [data-mark].isdone::after{content:" ✓";color:var(--ge);font-weight:800}
 @media (max-width:900px){
   .map .colhead{display:none}
