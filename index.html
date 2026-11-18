@@ -7,8 +7,10 @@
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/glossary.css">
 <style>
+.hero>div{flex:1 1 auto}
 .titlerow{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 36px}
 .titlerow .hs{font-size:1.05rem;font-weight:500}
+.titlerow .ded{margin-left:auto;align-self:flex-start;font-family:"STIX Two Text",serif;font-style:italic;font-size:1rem;color:var(--muted);white-space:nowrap}
 .tools.front{margin-top:12px}
 .lecture{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.92rem}
 #hideBtn{background:var(--ge);border-color:var(--ge);color:var(--paper);font-weight:700}
@@ -20,7 +22,7 @@
 <body><div class="wrap">
   <header class="hero">
     <div>
-      <div class="titlerow"><h1>고등수학 목차 및 개념</h1><a class="hs" href="https://middle-math.vercel.app/">중학수학 목차 및 개념 →</a></div>
+      <div class="titlerow"><h1>고등수학 목차 및 개념</h1><a class="hs" href="https://middle-math.vercel.app/">중학수학 목차 및 개념 →</a><span class="ded">For Jay &amp; Tay, by Grandpa</span></div>
       <p class="stage">2022 개정 교육과정 기준 · 2028학년도 수능부터 적용</p>
       <div class="tools front">
         <span class="progress" id="prog">이해한 단원 <b>0</b> / 30</span>
