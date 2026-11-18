@@ -4,10 +4,11 @@
 <meta name="description" content="Ⅱ 미분법 여러 가지 함수의 미분 — 특별한 수 e를 밑으로 쓰면 (ex)′ = ex, (ln x)′ = 1/x로 깔끔해진다. 삼각함수는 (sin x)′ = cos x, (cos x)′ = −sin x다.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&family=STIX+Two+Text:ital@0;1&display=swap">
-<link rel="stylesheet" href="../assets/style.css"></head>
+<link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/glossary.css"></head>
 <body><div class="wrap narrow">
 <nav class="topbar"><a class="home" href="../index.html">← 목차</a><span class="chip c-calc">미적분Ⅱ</span><span class="crumb">Ⅱ 미분법 · 3번째 줄</span></nav>
 <header class="title"><h1>여러 가지 함수의 미분</h1><p class="sub">Ⅱ 미분법 · 지수·로그함수의 미분 · 삼각함수의 덧셈정리 · 삼각함수의 미분</p></header>
+<section class="gloss" aria-label="용어와 정의"><h2 class="gl-h">용어와 정의</h2><dl class="gl"><div class="gi main"><dt><span class="unit">단원 이름</span><b>여러 가지 함수의 미분</b></dt><dd><span class="df">지수함수·로그함수·삼각함수 같은 초월함수의 도함수를 구하는 것</span></dd></div><div class="gi"><dt><b>초월함수</b><span class="hj">超越函數</span></dt><dd><span class="pt">초월(超越, 뛰어넘음) + 함수 → 다항식으로 나타낼 수 있는 범위를 넘어선 함수</span><span class="df">다항식의 덧셈·곱셈·나눗셈·근호만으로는 나타낼 수 없는 함수. 지수·로그·삼각함수 등</span></dd></div><div class="gi"><dt><b>자연상수 e</b></dt><dd><span class="pt">오일러(Euler)가 이 기호를 처음 쓴 데서 그의 이름 첫 글자로 기억하기도 한다</span><span class="df">lim<sub>x→0</sub>(1 + x)<sup>1/x</sup> = 2.718…. (e<sup>x</sup>)′ = e<sup>x</sup>가 되는 특별한 밑</span></dd></div><div class="gi"><dt><b>자연로그</b><span class="hj">自然 로그</span></dt><dd><span class="pt">자연(自然) + 로그</span><span class="df">밑이 e인 로그. ln x로 쓴다. (ln x)′ = 1/x</span></dd></div><div class="gi"><dt><b>덧셈정리</b><span class="hj">加法定理</span></dt><dd><span class="pt">가법(加法, 덧셈) + 정리</span><span class="df">sin(α + β) = sin α cos β + cos α sin β처럼 두 각의 합의 삼각함수를 각각의 삼각함수로 나타낸 공식</span></dd></div></dl></section>
 <div class="keybox"><span class="lab">한 줄로 외우기</span><p><span>특별한 수 e를 밑으로 쓰면 (e<sup>x</sup>)′ = e<sup>x</sup>, (ln x)′ = 1/x로 깔끔해진다. 삼각함수는 (sin x)′ = cos x, (cos x)′ = −sin x다.</span></p></div>
 <p class="why"><b>왜 배울까?</b>미적분Ⅰ에서는 다항함수만 미분했다. 인구 증가, 방사능 감소, 진동처럼 실제 현상은 지수·로그·삼각함수로 나타나므로 이 함수들도 미분할 수 있어야 한다.</p>
 <ul class="jump"><li><a href="#explog">지수·로그함수의 미분</a></li><li><a href="#addition">삼각함수의 덧셈정리</a></li><li><a href="#trig">삼각함수의 미분</a></li></ul>

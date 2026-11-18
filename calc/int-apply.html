@@ -4,12 +4,13 @@
 <meta name="description" content="Ⅲ 적분법 정적분의 활용 — 잘게 나누어 더한 것의 극한이 정적분이다. 그래서 넓이, 입체의 부피, 움직인 거리를 모두 &quot;조각을 적분&quot;해서 구할 수 있다.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&family=STIX+Two+Text:ital@0;1&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/glossary.css">
 <script>window.MathJax={tex:{inlineMath:[["$","$"]]},svg:{fontCache:"global"},options:{enableMenu:false}};</script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script></head>
 <body><div class="wrap narrow">
 <nav class="topbar"><a class="home" href="../index.html">← 목차</a><span class="chip c-calc">미적분Ⅱ</span><span class="crumb">Ⅲ 적분법 · 6번째 줄</span></nav>
 <header class="title"><h1>정적분의 활용</h1><p class="sub">Ⅲ 적분법 · 구분구적법 · 넓이와 부피 · 속도와 거리</p></header>
+<section class="gloss" aria-label="용어와 정의"><h2 class="gl-h">용어와 정의</h2><dl class="gl"><div class="gi main"><dt><span class="unit">단원 이름</span><b>정적분의 활용</b><span class="hj">定積分 · 活用</span></dt><dd><span class="pt">활용(活用, 살려 씀)</span><span class="df">정적분으로 넓이·부피·이동 거리를 구하는 것</span></dd></div><div class="gi"><dt><b>구분구적법</b><span class="hj">區分求積法</span></dt><dd><span class="pt">구분(區分, 나눔) + 구적(求積, 넓이·부피를 구함) + 법</span><span class="df">도형을 잘게 나누어 직사각형들의 넓이 합의 극한으로 넓이를 구하는 방법. 정적분의 출발점</span></dd></div><div class="gi"><dt><b>넓이</b></dt><dd><span class="pt">순우리말 '넓다'에서</span><span class="df">두 곡선 사이의 넓이 = ∫<sub>a</sub><sup>b</sup> |f(x) − g(x)| dx</span></dd></div><div class="gi"><dt><b>부피</b></dt><dd><span class="pt">순우리말 '부피'(덩치·크기)</span><span class="df">단면의 넓이가 S(x)인 입체의 부피 = ∫<sub>a</sub><sup>b</sup> S(x) dx</span></dd></div><div class="gi"><dt><b>속도와 거리</b><span class="hj">速度</span></dt><dd><span class="pt">속(速, 빠를 속) + 도(度, 정도 도)</span><span class="df">위치의 변화량 = ∫v(t)dt, 움직인 거리 = ∫|v(t)|dt</span></dd></div></dl></section>
 <div class="keybox"><span class="lab">한 줄로 외우기</span><p><span>잘게 나누어 더한 것의 극한이 정적분이다. 그래서 넓이, 입체의 부피, 움직인 거리를 모두 "조각을 적분"해서 구할 수 있다.</span></p></div>
 <p class="why"><b>왜 배울까?</b>구의 부피 공식이 왜 4πr³/3인지, 움직인 점이 실제로 이동한 거리가 얼마인지를 직접 계산할 수 있다. 물리·공학에서 누적량을 구하는 기본 방법이다.</p>
 <ul class="jump"><li><a href="#riemann">구분구적법</a></li><li><a href="#area">넓이와 부피</a></li><li><a href="#motion">속도와 거리</a></li><li><a href="#drill">연습문제 15</a></li></ul>

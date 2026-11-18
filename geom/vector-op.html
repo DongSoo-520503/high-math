@@ -4,12 +4,13 @@
 <meta name="description" content="Ⅲ 벡터 벡터의 연산 — 벡터는 크기와 방향을 함께 가진 양으로, 화살표로 나타낸다. 덧셈은 화살표를 이어 붙이기, 실수배는 늘이거나 줄이거나 뒤집기다.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&family=STIX+Two+Text:ital@0;1&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/glossary.css">
 <script>window.MathJax={tex:{inlineMath:[["$","$"]]},svg:{fontCache:"global"},options:{enableMenu:false}};</script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script></head>
 <body><div class="wrap narrow">
 <nav class="topbar"><a class="home" href="../index.html">← 목차</a><span class="chip c-geom">기하</span><span class="crumb">Ⅲ 벡터 · 5번째 줄</span></nav>
 <header class="title"><h1>벡터의 연산</h1><p class="sub">Ⅲ 벡터 · 벡터의 뜻 · 벡터의 덧셈과 뺄셈 · 벡터의 실수배</p></header>
+<section class="gloss" aria-label="용어와 정의"><h2 class="gl-h">용어와 정의</h2><dl class="gl"><div class="gi main"><dt><span class="unit">단원 이름</span><b>벡터</b><span class="hj">vector</span></dt><dd><span class="pt">라틴어 vehere(나르다)에서 온 vector(나르는 것)</span><span class="df">크기와 방향을 함께 가진 양. 화살표로 나타낸다</span></dd></div><div class="gi"><dt><b>스칼라</b><span class="hj">scalar</span></dt><dd><span class="pt">라틴어 scala(사다리·눈금)에서</span><span class="df">크기만 있는 양(길이, 넓이, 온도 등)</span></dd></div><div class="gi"><dt><b>영벡터 · 단위벡터</b><span class="hj">零 · 單位</span></dt><dd><span class="pt">영(零, 0), 단위(單位, 기준이 되는 하나)</span><span class="df">시점과 종점이 같아 크기가 0인 벡터가 영벡터, 크기가 1인 벡터가 단위벡터</span></dd></div><div class="gi"><dt><b>위치벡터</b><span class="hj">位置</span></dt><dd><span class="pt">위치(位置, 놓인 자리)</span><span class="df">기준점 O를 시점으로 하는 벡터 OA. 점 A의 위치를 벡터로 나타낸다</span></dd></div><div class="gi"><dt><b>실수배</b><span class="hj">實數倍</span></dt><dd><span class="pt">실수 + 배(倍, 곱 배)</span><span class="df">벡터에 실수 k를 곱한 것. 크기는 |k|배, k &lt; 0이면 방향이 반대</span></dd></div></dl></section>
 <div class="keybox"><span class="lab">한 줄로 외우기</span><p><span>벡터는 크기와 방향을 함께 가진 양으로, 화살표로 나타낸다. 덧셈은 화살표를 이어 붙이기, 실수배는 늘이거나 줄이거나 뒤집기다.</span></p></div>
 <p class="why"><b>왜 배울까?</b>힘, 속도, 바람처럼 "어느 쪽으로 얼마만큼"인 양은 수 하나로 나타낼 수 없다. 벡터를 쓰면 여러 힘이 합쳐진 결과를 계산할 수 있다.</p>
 <ul class="jump"><li><a href="#def">벡터의 뜻</a></li><li><a href="#add">벡터의 덧셈과 뺄셈</a></li><li><a href="#scalar">벡터의 실수배</a></li><li><a href="#drill">연습문제 15</a></li></ul>
